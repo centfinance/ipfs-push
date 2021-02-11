@@ -1,36 +1,21 @@
 import { subgraphRequest } from "../../utils";
 
-const subgraphUrl = 'https://api.thegraph.com/subgraphs/name/centfinance/cent-swap-kovan';
+const subgraphUrl = 'https://api.thegraph.com/subgraphs/name/centfinance/cent-swap-xdai';
 
 export const key = 'cent-pool-management/registry';
 // https://cloudflare-ipfs.com/ipns/cent-team-bucket.storage.fleek.co/cent-pool-management/registry
 
 const stablecoin = [
-  '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', // WETH
-  '0x6b175474e89094c44da98b954eedeac495271d0f', // DAI
-  '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', // USDC
-  '0x57ab1ec28d129707052df4df418d58a2d46d5f51', // sUSD
-  '0x056fd409e1d7a124bd7017459dfea2f387b6d5cd', // GUSD
-  '0x5bc25f649fc4e26069ddf4cf4010f9f706c23831', // DUSD
-  '0xe2f2a5c287993345a840db3b0845fbc70f5935a5', // mUSD
-  '0x39aa39c021dfbae8fac545936693ac917d5e7563', // cUSDC
-  '0x5d3a536e4d6dbd6114cc1ead35777bab948e3643', // cDAI
-  '0xf650c3d88d12db855b8bf7d11be6c55a4e07dcc9' // cUSDT
+  '0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1', // WETH
+  '0x44fA8E6f47987339850636F88629646662444217', // DAI
+  '0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83', // USDC
+  '0xb7D311E2Eb55F2f68a9440da38e7989210b9A05e'  // STAKE
 ].map(address => address.toLowerCase());
 
 const defi = [
-  '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', // WETH
+  '0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1', // WETH
   '0xba100000625a3754423978a60c9317c58a424e3d', // BAL
-  '0x1f9840a85d5af5bf1d1762f925bdaddc4201f984', // UNI
-  '0x0bc529c00c6401aef6d220be8c6ea1667f6ad93e', // YFI
-  '0xd533a949740bb3306d119cc777fa900ba034cd52', // CRV
-  '0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f', // SNX
-  '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9', // AAVE
-  '0xc00e94cb662c3520282e6f5717214004a7f26888', // COMP
-  '0x04fa0d235c4abf4bcf4787af4cf447de572ef828', // UMA
-  '0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2', // MKR
-  '0xa3bed4e1c75d00fa6f4e5e6922db7261b5e9acd2', // MTA
-  '0xad32A8e6220741182940c5aBF610bDE99E737b2D' // DOUGH
+  '0x4537e328Bf7e4eFA29D05CAeA260D7fE26af9D74'  // UNI
 ].map(address => address.toLowerCase());
 
 function getTags(pool) {
